@@ -8,3 +8,5 @@ from django.conf import settings
 # default is 3600s (1 hour)
 CMSPLUGIN_FEED_CACHE_TIMEOUT = getattr(settings,
                                        'CMSPLUGIN_FEED_CACHE_TIMEOUT', 3600)
+
+TEMPLATE_CHOICES = (('cmsplugin_feed/feed.html', 'feed'),) + getattr(settings, 'CMSPLUGIN_FEED_TEMPLATES', ())
