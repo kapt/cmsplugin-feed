@@ -43,7 +43,6 @@ class FeedPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         feed = get_cached_feed(instance)
-        print feed
 
         if feed:
             self.render_template = instance.template
